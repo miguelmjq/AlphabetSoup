@@ -36,6 +36,7 @@ public class Soup {
     //Use Math.random() to get a random character from the letters string and return it.
     public char randomLetter(){
        char temp= letters.charAt((int)(Math.random()*(letters.length()-1)));
+       System.out.println("check");
         return temp;
     }
 
@@ -45,8 +46,9 @@ public class Soup {
     public String companyCentered(){
         String temp1 = letters.substring(0,(letters.length()-1)/2);
         String temp2 = letters.substring((letters.length()-1)/2,letters.length()-1);
-        String temp3 = temp1+company+temp2;
+        String temp3 = ""+temp1+company+temp2;
         System.out.println(temp3);
+        System.out.println("testtest");
         return temp3;
     }
 
@@ -63,6 +65,11 @@ public class Soup {
 
     //should remove the word "word" from the string letters. If the word is not found in letters then it does nothing.
     public void removeWord(String word){
-        
+        if (letters.contains(word)){
+            System.out.println("hey");
+        }
+        else {
+            System.out.println("bye");
+        }
     }
 }
