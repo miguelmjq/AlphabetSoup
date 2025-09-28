@@ -71,10 +71,11 @@ public class Soup {
     //should remove the word "word" from the string letters. If the word is not found in letters then it does nothing.
     public void removeWord(String word){
         if (letters.contains(word)){
-            System.out.println("hey");                                                                          
+            letters = letters.replaceAll(word, "");
+            System.out.println(word+ " removed");                                                                          
         }
         else {
-            System.out.println("bye");
+            System.out.println(word+ " not in string");
         }
     }
 }
