@@ -1,3 +1,9 @@
+//Name: Miguel Mirabal
+//Date: 09/28/25
+//Description: This program will insert a company name into a string of letters provided by the user, it can also remove some of the letters, remove a vowel, remove a specific
+//word from the string, and get a random char from the string.
+
+
 public class Soup {
     //these are instance variables 
     private String letters;
@@ -27,12 +33,15 @@ public class Soup {
 
 //below are the functions you'll be writing.
 
+    //precondition- the input can be anything
+    //poscondition- returns the string 'letters' with the input added to the string
     //adds a word to the pool of letters known as "letters"
     public void add(String word){
         letters += word;
     }
 
-
+    //precondition- no input 
+    //poscondition- returns a random character from the string 
     //Use Math.random() to get a random character from the letters string and return it.
     public char randomLetter(){
        char temp= letters.charAt((int)(Math.random()*(letters.length()-1)));
@@ -41,8 +50,8 @@ public class Soup {
     }
 
 
-    //returns the letters currently stored with the company name placed directly in the center of all
-    //the letters
+    //precondition- no input needed
+    //poscondition- returns the string of letters with the company name added in the center of it
     public String companyCentered(){
         String temp1 = letters.substring(0,(letters.length()-1)/2);
         String temp2 = letters.substring((letters.length()-1)/2,letters.length()-1);
@@ -53,13 +62,15 @@ public class Soup {
     }
 
 
-    //should remove the first available vowel from letters. If there are no vowels this method has no effect.
+    //precondition- no input needed
+    //poscondition- returns the string letters with the first vowel removed
     public void removeFirstVowel(){
         letters = letters.replaceFirst("[AEIOUaeiou]", "");
         System.out.println("blabla");
         }
 
-    //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
+    //precondition- a num that is less than the total length of the string letters
+    //poscondition- returns the string letters with num amount of characters removed from a random spot
     public void removeSome(int num){
         int m = (int)(Math.random()*letters.length()-1);
         String c = letters.substring(0,m);
@@ -68,7 +79,8 @@ public class Soup {
         System.out.println(letters);
     }
 
-    //should remove the word "word" from the string letters. If the word is not found in letters then it does nothing.
+    //precondition- a word
+    //poscondition- returns the string letters with the word specified removed 
     public void removeWord(String word){
         if (letters.contains(word)){
             letters = letters.replaceAll(word, "");
