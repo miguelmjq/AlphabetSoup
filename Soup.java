@@ -61,13 +61,17 @@ public class Soup {
 
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
     public void removeSome(int num){
-   
+        int m = (int)(Math.random()*letters.length()-1);
+        String c = letters.substring(0,m);
+        String c2 = letters.substring(m+num, letters.length()-1);
+        letters = c+c2;
+        System.out.println(letters);
     }
 
     //should remove the word "word" from the string letters. If the word is not found in letters then it does nothing.
     public void removeWord(String word){
         if (letters.contains(word)){
-            System.out.println("hey");
+            System.out.println("hey");                                                                          
         }
         else {
             System.out.println("bye");
