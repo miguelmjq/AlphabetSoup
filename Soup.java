@@ -45,7 +45,7 @@ public class Soup {
     //Use Math.random() to get a random character from the letters string and return it.
     public char randomLetter(){
        char temp= letters.charAt((int)(Math.random()*(letters.length()-1)));
-       System.out.println("check");
+       System.out.println("rl check");
         return temp;
     }
 
@@ -57,7 +57,7 @@ public class Soup {
         String temp2 = letters.substring((letters.length()-1)/2,letters.length()-1);
         String temp3 = ""+temp1+company+temp2;
         System.out.println(temp3);
-        System.out.println("testtest");
+        System.out.println("cc check");
         return temp3;
     }
 
@@ -66,7 +66,7 @@ public class Soup {
     //poscondition- returns the string letters with the first vowel removed
     public void removeFirstVowel(){
         letters = letters.replaceFirst("[AEIOUaeiou]", "");
-        System.out.println("blabla");
+        System.out.println("rfv check ");
         }
 
     //precondition- a num that is less than the total length of the string letters
