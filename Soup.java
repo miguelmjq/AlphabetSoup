@@ -56,9 +56,9 @@ public class Soup {
         String temp1 = letters.substring(0,(letters.length()-1)/2);
         String temp2 = letters.substring((letters.length()-1)/2,letters.length()-1);
         String temp3 = ""+temp1+company+temp2;
-        System.out.println(temp3);
+       letters = temp3;
         System.out.println("cc check");
-        return temp3;
+        return letters;
     }
 
 
