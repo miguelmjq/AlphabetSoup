@@ -72,10 +72,13 @@ public class Soup {
     //precondition- a num that is less than the total length of the string letters
     //poscondition- returns the string letters with num amount of characters removed from a random spot
     public void removeSome(int num){
-        int m = (int)(Math.random()*letters.length()-1);
+        int m = (int)(Math.random()*(letters.length()-1));
+        if (m+num>letters.length()-1){
+            num = (letters.length()-1)-m;
+        }
         String c = letters.substring(0,m);
-        String c2 = letters.substring(m+num, letters.length()-1);
-        letters = c+c2;
+        String c2 = letters.substring(m+num, letters.length()-1); 
+        letters =c+c2;
         System.out.println(letters);
     }
 
